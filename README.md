@@ -53,8 +53,9 @@ It leverages a **Machine Learning model** (Random Forest) trained on Indian nutr
 ---
 
 ## 4. Getting Started & Installation
----
+```markdown
 
+---
 ## 🚀 Getting Started
 
 ### Prerequisites
