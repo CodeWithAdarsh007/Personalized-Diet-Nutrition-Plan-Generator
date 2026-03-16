@@ -39,12 +39,18 @@ It leverages a **machine learning model** (Random Forest) trained on Indian nutr
 
 ## 📁 Project Structure
 .
-├── app.py # Main Streamlit application/n
-├── diet_model.ipynb # Jupyter notebook for model training & EDA/n
-├── diet_model.pkl # Trained Random Forest model (output from notebook)/n
-├── Indian_meal_dataset.xlsx # Food items with calories, meal type, diet type/n
-├── MP_Indian_Personal_Nutrition_Requirements.xlsx # Dataset for model training/n
-├── Indian_Food_Master_Dataset.xlsx # Additional food info (not used by app)/n
+├── app.py # Main Streamlit application
+
+├── diet_model.ipynb # Jupyter notebook for model training & EDA
+
+├── diet_model.pkl # Trained Random Forest model (output from notebook)
+
+├── Indian_meal_dataset.xlsx # Food items with calories, meal type, diet type
+
+├── MP_Indian_Personal_Nutrition_Requirements.xlsx # Dataset for model training
+
+├── Indian_Food_Master_Dataset.xlsx # Additional food info (not used by app)
+
 └── README.md # This file
 
 ---
@@ -60,103 +66,161 @@ It leverages a **machine learning model** (Random Forest) trained on Indian nutr
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/diet-plan-generator.git/n
-   cd diet-plan-generator/n
+   git clone https://github.com/yourusername/diet-plan-generator.git
+
+   cd diet-plan-generator
+
    Create and activate a virtual environment (recommended)
 
-bash/n
-python -m venv venv/n
-source venv/bin/activate      # On Windows: venv\Scripts\activate/n
-Install dependencies/n
+bash
 
-bash/n
-pip install -r requirements.txt/n
-If no requirements.txt is present, install manually:/n
+python -m venv venv
 
-bash/n
-pip install streamlit pandas numpy scikit-learn matplotlib seaborn joblib openpyxl/n
-Place the required datasets in the project root:/n
+source venv/bin/activate      # On Windows: venv\Scripts\activate
 
-Indian_meal_dataset.xlsx/n
+Install dependencies
 
-MP_Indian_Personal_Nutrition_Requirements.xlsx (for model training)/n
 
-Indian_Food_Master_Dataset.xlsx (optional)/n
+bash
 
-Train the ML model (or use the provided diet_model.pkl):/n
+pip install -r requirements.txt
 
-Run diet_model.ipynb in Jupyter to generate a new model./n
+If no requirements.txt is present, install manually:
 
-The notebook will produce diet_model.pkl./n
 
-Running the App/n
-Start the Streamlit server:/n
+bash
 
-bash/n
-streamlit run app.py/n
-Then open your browser at http://localhost:8501./n
+pip install streamlit pandas numpy scikit-learn matplotlib seaborn joblib openpyxl
 
-📊 How It Works/n
-User inputs are collected via the sidebar./n
+Place the required datasets in the project root:
 
-BMI and BMR are calculated using standard formulas./n
 
-Daily calorie target is derived from TDEE and adjusted by the selected goal./n
+Indian_meal_dataset.xlsx
 
-Food dataset filtering applies diet type and intolerance rules./n
 
-Meal generation function picks foods that fit within the calorie target for each meal (Breakfast ~25%, Lunch ~40%, Dinner ~35% of daily calories)./n
+MP_Indian_Personal_Nutrition_Requirements.xlsx (for model training)
 
-Health metrics and the final diet plan are displayed in three columns./n
 
-🤖 Machine Learning Model/n
-The model (diet_model.pkl) is a Random Forest Classifier trained on the MP_Indian_Personal_Nutrition_Requirements.xlsx dataset./n
+Indian_Food_Master_Dataset.xlsx (optional)
 
-Features: Age, BMI (calculated from weight/height)/n
 
-Target: Diet goal – Weight Gain, Maintenance, Weight Loss/n
+Train the ML model (or use the provided diet_model.pkl):
 
-Preprocessing: BMI computed, missing values handled./n
 
-Performance: Achieved 100% accuracy on the test set (dataset is small and deterministic)./n
+Run diet_model.ipynb in Jupyter to generate a new model.
 
-Feature importance: BMI is the dominant predictor./n
 
-You can re‑train or experiment with the model using the provided Jupyter notebook diet_model.ipynb./n
+The notebook will produce diet_model.pkl.
 
-📈 Future Enhancements/n
-Expand food database – Include more Indian dishes with detailed macronutrients (protein, carbs, fat) and micronutrients (iron, vitamin C)./n
 
-Optimised meal planning – Use knapsack or linear programming to hit exact calorie targets./n
+Running the App
 
-User accounts – Save history and track progress./n
+Start the Streamlit server:
 
-Nutritional balance – Ensure meals meet daily recommended intakes for key vitamins/minerals./n
 
-Deploy online – Host on Streamlit Cloud / Heroku for public access./n
+bash
 
-🤝 Contributing/n
-Contributions, issues, and feature requests are welcome!/n
-Feel free to check the issues page or submit a pull request./n
+streamlit run app.py
 
-Fork the project./n
+Then open your browser at http://localhost:8501.
 
-Create your feature branch (git checkout -b feature/AmazingFeature)./n
 
-Commit your changes (git commit -m 'Add some AmazingFeature')./n
+📊 How It Works
 
-Push to the branch (git push origin feature/AmazingFeature)./n
+User inputs are collected via the sidebar.
 
-Open a pull request./n
 
-📝 License/n
-Distributed under the MIT License. See LICENSE for more information./n
+BMI and BMR are calculated using standard formulas.
 
-🙏 Acknowledgements/n
-The Indian food datasets were compiled from public nutrition resources./n
 
-Built with Streamlit – the fastest way to build data apps./n
+Daily calorie target is derived from TDEE and adjusted by the selected goal.
 
-Machine learning powered by scikit-learn./n
+
+Food dataset filtering applies diet type and intolerance rules.
+
+
+Meal generation function picks foods that fit within the calorie target for each meal (Breakfast ~25%, Lunch ~40%, Dinner ~35% of daily calories).
+
+
+Health metrics and the final diet plan are displayed in three columns.
+
+
+🤖 Machine Learning Model
+
+The model (diet_model.pkl) is a Random Forest Classifier trained on the MP_Indian_Personal_Nutrition_Requirements.xlsx dataset.
+
+
+Features: Age, BMI (calculated from weight/height)
+
+
+Target: Diet goal – Weight Gain, Maintenance, Weight Loss
+
+
+Preprocessing: BMI computed, missing values handled.
+
+
+Performance: Achieved 100% accuracy on the test set (dataset is small and deterministic).
+
+
+Feature importance: BMI is the dominant predictor.
+
+
+You can re‑train or experiment with the model using the provided Jupyter notebook diet_model.ipynb.
+
+
+📈 Future Enhancements
+
+Expand food database – Include more Indian dishes with detailed macronutrients (protein, carbs, fat) and micronutrients (iron, vitamin C).
+
+
+Optimised meal planning – Use knapsack or linear programming to hit exact calorie targets.
+
+
+User accounts – Save history and track progress.
+
+
+Nutritional balance – Ensure meals meet daily recommended intakes for key vitamins/minerals.
+
+
+Deploy online – Host on Streamlit Cloud / Heroku for public access.
+
+
+🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the issues page or submit a pull request.
+
+
+Fork the project.
+
+
+Create your feature branch (git checkout -b feature/AmazingFeature).
+
+
+Commit your changes (git commit -m 'Add some AmazingFeature').
+
+
+Push to the branch (git push origin feature/AmazingFeature).
+
+
+Open a pull request.
+
+
+📝 License
+
+Distributed under the MIT License. See LICENSE for more information.
+
+
+🙏 Acknowledgements
+
+The Indian food datasets were compiled from public nutrition resources.
+
+
+Built with Streamlit – the fastest way to build data apps.
+
+
+Machine learning powered by scikit-learn.
+
 
 Enjoy your personalized diet plan! 🥑🍛🥗
