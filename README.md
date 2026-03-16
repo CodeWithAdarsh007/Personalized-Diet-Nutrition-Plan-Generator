@@ -58,7 +58,7 @@ An intelligent **diet planning web application** that generates personalized mea
 
 1. **Clone the Repository**
    ```
-   git clone https://github.com/yourusername/diet-plan-generator.git
+   git clone https://github.com/codewithadarsh007/Personalized-Diet-Nutrition-Plan-Generator.git
    cd diet-plan-generator
    ```
 
