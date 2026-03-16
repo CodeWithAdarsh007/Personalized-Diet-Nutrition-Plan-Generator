@@ -38,7 +38,6 @@ An intelligent **diet planning web application** that generates personalized mea
 ├── app.py                # Main Streamlit application
 ├── diet_model.ipynb      # Jupyter notebook for EDA and model training
 ├── diet_model.pkl        # Trained Random Forest model
-├── requirements.txt      # List of dependencies
 ├── data/                 # Directory for datasets
 │   ├── Indian_meal_dataset.xlsx
 │   ├── MP_Indian_Personal_Nutrition_Requirements.xlsx
