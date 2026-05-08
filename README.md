@@ -39,7 +39,7 @@ An intelligent **diet planning web application** that generates personalized mea
 ├── diet_model.ipynb      # Jupyter notebook for EDA and model training
 ├── diet_model.pkl        # Trained Random Forest model
 ├── data/                 # Directory for datasets
-│   ├── Indian_meal_dataset.xlsx
+│   ├── changed_Indian_meal_dataset.xlsx
 │   ├── MP_Indian_Personal_Nutrition_Requirements.xlsx
 │   └── Indian_Food_Master_Dataset.xlsx
 └── README.md             # Project documentation
